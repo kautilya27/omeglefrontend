@@ -96,7 +96,7 @@ function Header() {
       <div
         style={{
           display: "flex",
-          alignItems: "center",
+          alignItems: "flex-end",
           marginRight: 20,
         }}
       >
@@ -108,13 +108,14 @@ function Header() {
             marginRight: 5,
           }}
         >
-          {onlineCount.toLocaleString()}
+          {onlineCount.toLocaleString()}+
         </span>
         <span
           style={{
-            color: "#68a8f5",
+            color: "#a5cdfd",
             fontWeight: 500,
             fontSize: 16,
+            marginBottom: 2,
           }}
         >
           online now
