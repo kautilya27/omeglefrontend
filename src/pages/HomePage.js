@@ -21,18 +21,21 @@ const HomePage = () => {
     <div className="min-h-screen bg-[#f9f9f7]">
       <header className="container mx-auto p-4 flex justify-between items-center">
         <div className="flex items-center">
-          {/* Add logo or nav items here if needed */}
+          {/* Logo or nav here */}
         </div>
       </header>
 
       <main className="container mx-auto p-4 max-w-3xl">
         <div className="bg-white rounded-lg p-8 shadow-md">
-          {/* Fixed Heading Text */}
-          <h1 className="text-base font-semibold text-center mb-6 max-w-xl mx-auto leading-relaxed">
+          {/* FORCED SINGLE LINE */}
+          <h1
+            className="text-base font-semibold text-center mb-6 whitespace-nowrap overflow-hidden text-ellipsis mx-auto"
+            style={{ maxWidth: "100%", width: "1000px" }}
+          >
             You don't need an app to use Omegle Online on your phone or tablet! The website works great on mobile.
           </h1>
 
-          {/* Centered Image */}
+          {/* Image Centered */}
           <div className="mb-8 flex justify-center">
             <img
               src="/people%20video%20calling.webp"
@@ -41,7 +44,7 @@ const HomePage = () => {
             />
           </div>
 
-          {/* Main Info Text */}
+          {/* Description */}
           <div className="mb-8">
             <p className="mb-4">
               Omegle (oh-meg-ull) Online is a great way to meet new friends. When you use Omegle Online, we pick someone
@@ -51,7 +54,7 @@ const HomePage = () => {
             </p>
           </div>
 
-          {/* Terms Checkbox */}
+          {/* Terms */}
           <div className="mb-6">
             <label className="flex items-center">
               <input
@@ -66,12 +69,12 @@ const HomePage = () => {
             </label>
           </div>
 
-          {/* Notice Box */}
+          {/* Warning */}
           <div className="p-4 mb-8 text-center rounded bg-blue-100 shadow-sm">
             <p className="font-bold">Video is monitored. Keep it clean ❗</p>
           </div>
 
-          {/* Construction Message */}
+          {/* Construction Note */}
           <div className="text-center mb-8 text-red-600 font-bold">
             <p>This website is under construction and will be fully working by June.</p>
           </div>
@@ -89,10 +92,8 @@ const HomePage = () => {
               />
             </div>
 
-            {/* Start Chatting Title */}
+            {/* Start Chatting */}
             <h2 className="text-xl font-bold mb-4">Start chatting:</h2>
-
-            {/* Chat Buttons */}
             <div className="flex justify-center gap-4">
               <button
                 onClick={() => startChat("text")}
