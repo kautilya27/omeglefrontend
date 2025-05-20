@@ -26,9 +26,9 @@ const HomePage = () => {
       <main className="container mx-auto px-2 pt-1 max-w-3xl">
         <div className="bg-white rounded-lg p-5 shadow-md">
 
-          {/* Notice */}
-          <h2 className="text-xs font-semibold text-center mb-4 whitespace-nowrap overflow-hidden text-ellipsis mx-auto">
-            You don't need an app to use Omegle Online on your phone or tablet! The website works great on mobile.
+          {/* Notice (Updated Styling) */}
+          <h2 className="text-sm font-bold text-left text-black mb-4 whitespace-nowrap">
+            You don't need an app to use Omegle on your phone or tablet! The website works great on mobile.
           </h2>
 
           {/* Image */}
