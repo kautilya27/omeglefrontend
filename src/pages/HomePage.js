@@ -21,18 +21,19 @@ const HomePage = () => {
     <div className="min-h-screen bg-[#f9f9f7]">
       <header className="container mx-auto p-4 flex justify-between items-center">
         <div className="flex items-center">
-          {/* Logo or nav here */}
+          {/* Add logo or navigation here if needed */}
         </div>
       </header>
 
       <main className="container mx-auto p-4 max-w-3xl">
         <div className="bg-white rounded-lg p-8 shadow-md">
-          {/* Forced single line, smaller font */}
-          <h1
-            className="text-sm font-semibold text-center mb-6 whitespace-nowrap overflow-hidden text-ellipsis mx-auto"
+
+          {/* Updated h2 with smaller font */}
+          <h2
+            className="text-xs font-semibold text-center mb-6 whitespace-nowrap overflow-hidden text-ellipsis mx-auto"
           >
             You don't need an app to use Omegle Online on your phone or tablet! The website works great on mobile.
-          </h1>
+          </h2>
 
           {/* Centered Image */}
           <div className="mb-8 flex justify-center">
@@ -53,7 +54,7 @@ const HomePage = () => {
             </p>
           </div>
 
-          {/* Terms */}
+          {/* Terms Checkbox */}
           <div className="mb-6">
             <label className="flex items-center">
               <input
@@ -68,17 +69,17 @@ const HomePage = () => {
             </label>
           </div>
 
-          {/* Warning */}
+          {/* Blue Notice */}
           <div className="p-4 mb-8 text-center rounded bg-blue-100 shadow-sm">
             <p className="font-bold">Video is monitored. Keep it clean ❗</p>
           </div>
 
-          {/* Construction Note */}
+          {/* Under Construction */}
           <div className="text-center mb-8 text-red-600 font-bold">
             <p>This website is under construction and will be fully working by June.</p>
           </div>
 
-          {/* Interests Input */}
+          {/* Interest Input */}
           <div className="text-center mb-8">
             <h2 className="text-xl font-bold mb-4">What do you wanna talk about?</h2>
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
@@ -91,7 +92,7 @@ const HomePage = () => {
               />
             </div>
 
-            {/* Start Chatting */}
+            {/* Start Chatting Section */}
             <h2 className="text-xl font-bold mb-4">Start chatting:</h2>
             <div className="flex justify-center gap-4">
               <button
