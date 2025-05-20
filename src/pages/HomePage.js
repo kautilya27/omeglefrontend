@@ -3,7 +3,6 @@
 import { useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-
 const HomePage = () => {
   const navigate = useNavigate()
   const [onlineUsers] = useState(Math.floor(Math.random() * 5000) + 8000)
@@ -22,35 +21,27 @@ const HomePage = () => {
     <div className="min-h-screen bg-[#f9f9f7]">
       <header className="container mx-auto p-4 flex justify-between items-center">
         <div className="flex items-center">
-          
-          
+          {/* Add logo or nav items here if needed */}
         </div>
-        
       </header>
 
       <main className="container mx-auto p-4 max-w-3xl">
         <div className="bg-white rounded-lg p-8 shadow-md">
-          <h1 className="text-xl font-bold text-center mb-6">
+          {/* Fixed Heading Text */}
+          <h1 className="text-base font-semibold text-center mb-6 max-w-xl mx-auto leading-relaxed">
             You don't need an app to use Omegle Online on your phone or tablet! The website works great on mobile.
           </h1>
 
-          {/* <div className="mb-8 flex justify-center">
+          {/* Centered Image */}
+          <div className="mb-8 flex justify-center">
             <img
-              
               src="/people%20video%20calling.webp"
               alt="Video chat example"
-              className="rounded-lg shadow-md"
+              className="rounded-lg shadow-md max-h-52 object-cover"
             />
-          </div> */}
-           {/* Image */}
-      <div style={{ textAlign: "center", marginBottom: 20 }}>
-        <img
-          src="/people%20video%20calling.webp"
-          alt="People Video Calling"
-          style={{ maxWidth: "100%", height: "200px", borderRadius: 8, marginLeft: "25%"}}
-        />
-      </div>
+          </div>
 
+          {/* Main Info Text */}
           <div className="mb-8">
             <p className="mb-4">
               Omegle (oh-meg-ull) Online is a great way to meet new friends. When you use Omegle Online, we pick someone
@@ -60,6 +51,7 @@ const HomePage = () => {
             </p>
           </div>
 
+          {/* Terms Checkbox */}
           <div className="mb-6">
             <label className="flex items-center">
               <input
@@ -74,14 +66,17 @@ const HomePage = () => {
             </label>
           </div>
 
-          <div className="p-4 mb-8 text-center rounded bg-blue-100">
-            <p className="font-bold">Video is monitored. Keep it clean !</p>
+          {/* Notice Box */}
+          <div className="p-4 mb-8 text-center rounded bg-blue-100 shadow-sm">
+            <p className="font-bold">Video is monitored. Keep it clean ❗</p>
           </div>
 
+          {/* Construction Message */}
           <div className="text-center mb-8 text-red-600 font-bold">
             <p>This website is under construction and will be fully working by June.</p>
           </div>
 
+          {/* Interests Input */}
           <div className="text-center mb-8">
             <h2 className="text-xl font-bold mb-4">What do you wanna talk about?</h2>
             <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
@@ -90,11 +85,14 @@ const HomePage = () => {
                 placeholder="Add your interests (optional)"
                 value={interests}
                 onChange={(e) => setInterests(e.target.value)}
-                className="p-3 rounded border border-gray-300 w-full"
+                className="p-3 rounded border border-gray-300 w-full sm:w-96"
               />
             </div>
 
+            {/* Start Chatting Title */}
             <h2 className="text-xl font-bold mb-4">Start chatting:</h2>
+
+            {/* Chat Buttons */}
             <div className="flex justify-center gap-4">
               <button
                 onClick={() => startChat("text")}
@@ -113,8 +111,6 @@ const HomePage = () => {
           </div>
         </div>
       </main>
-
-      
     </div>
   )
 }
