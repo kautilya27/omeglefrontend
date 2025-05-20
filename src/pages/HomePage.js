@@ -19,11 +19,11 @@ const HomePage = () => {
 
   return (
     <div className="min-h-screen bg-[#f9f9f7]">
-      <header className="container mx-auto p-2 flex justify-between items-center">
+      <header className="container mx-auto px-2 py-1 flex justify-between items-center">
         <div className="flex items-center">{/* logo or nav */}</div>
       </header>
 
-      <main className="container mx-auto px-2 py-4 max-w-3xl">
+      <main className="container mx-auto px-2 pt-1 max-w-3xl">
         <div className="bg-white rounded-lg p-5 shadow-md">
 
           {/* Notice */}
