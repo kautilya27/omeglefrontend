@@ -9,7 +9,7 @@ function Header() {
         justifyContent: "space-between",
         background: "#fff",
         padding: "10px 0",
-        boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
+        boxShadow: "0 2px 8px rgba(0, 0, 0, 0.12)", // updated shadow
         borderBottom: "1px solid #f0f0f0",
         flexWrap: "wrap",
       }}
