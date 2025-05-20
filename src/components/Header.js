@@ -9,9 +9,11 @@ function Header() {
         justifyContent: "space-between",
         background: "#fff",
         padding: "10px 0",
-        boxShadow: "0 2px 8px rgba(0, 0, 0, 0.12)", // updated shadow
+        boxShadow: "0 6px 12px rgba(0, 0, 0, 0.15)", // stronger shadow
         borderBottom: "1px solid #f0f0f0",
         flexWrap: "wrap",
+        position: "relative", // optional for stacking
+        zIndex: 10, // optional to bring it above content
       }}
     >
       {/* Logo and Online Text */}
