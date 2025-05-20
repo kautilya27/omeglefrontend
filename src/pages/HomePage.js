@@ -30,7 +30,7 @@ const HomePage = () => {
 
           {/* Heading */}
           <h2
-            className="text-xs font-semibold text-center mb-6 whitespace-nowrap overflow-hidden text-ellipsis mx-auto"
+            className="text-sm font-semibold text-center mb-6 whitespace-nowrap overflow-hidden text-ellipsis mx-auto"
           >
             You don't need an app to use Omegle Online on your phone or tablet! The website works great on mobile.
           </h2>
@@ -74,11 +74,11 @@ const HomePage = () => {
             <p className="font-bold">Video is monitored. Keep it clean ❗</p>
           </div>
 
-          {/* Flex Row: Interests & Chat Buttons */}
+          {/* Flex Row: Interest + Buttons aligned */}
           <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
             
             {/* Interest Input */}
-            <div className="flex-1">
+            <div className="flex-1 w-full">
               <h2 className="text-lg font-bold mb-2">What do you wanna talk about?</h2>
               <input
                 type="text"
@@ -89,16 +89,17 @@ const HomePage = () => {
               />
             </div>
 
-            {/* Start Chatting Buttons */}
-            <div className="flex-1 text-center sm:text-right">
-              <h2 className="text-lg font-bold mb-4 sm:mb-2">Start chatting:</h2>
-              <div className="flex justify-center sm:justify-end gap-4">
+            {/* Buttons + Title */}
+            <div className="flex-1 w-full text-center">
+              <h2 className="text-lg font-bold mb-4">Start chatting:</h2>
+              <div className="flex justify-center gap-4 items-center">
                 <button
                   onClick={() => startChat("text")}
                   className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded"
                 >
                   Text
                 </button>
+                <span className="font-medium">or</span>
                 <button
                   onClick={() => startChat("video")}
                   className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded"
@@ -107,8 +108,8 @@ const HomePage = () => {
                 </button>
               </div>
             </div>
-
           </div>
+
         </div>
       </main>
     </div>
