@@ -1,18 +1,33 @@
 import React, { useState, useEffect } from "react";
 
 function Header() {
-  const [onlineCount, setOnlineCount] = useState(getRandomOnlineCount());
+  const [onlineCount, setOnlineCount] = useState(getInitialCount());
 
   useEffect(() => {
     const interval = setInterval(() => {
-      setOnlineCount(getRandomOnlineCount());
-    }, 5000); // update every 5 seconds
+      setOnlineCount((prev) => {
+        const change = getRandomChange();
+        let next = prev + change;
 
-    return () => clearInterval(interval); // cleanup on unmount
+        // Clamp the value between 6000 and 12000
+        if (next < 6000) next = 6000;
+        if (next > 12000) next = 12000;
+
+        return next;
+      });
+    }, 5000);
+
+    return () => clearInterval(interval);
   }, []);
 
-  function getRandomOnlineCount() {
-    return Math.floor(Math.random() * (12000 - 6000 + 1)) + 6000;
+  // Initial random count
+  function getInitialCount() {
+    return Math.floor(Math.random() * (12000 - 8000)) + 8000;
+  }
+
+  // Small fluctuation between -50 and +50
+  function getRandomChange() {
+    return Math.floor(Math.random() * 101) - 50; // from -50 to +50
   }
 
   return (
