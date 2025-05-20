@@ -21,7 +21,7 @@ const HomePage = () => {
     <div className="min-h-screen bg-[#f9f9f7]">
       <header className="container mx-auto p-4 flex justify-between items-center">
         <div className="flex items-center">
-          {/* Add logo or navigation here if needed */}
+          {/* Add logo or nav if needed */}
         </div>
       </header>
 
@@ -29,7 +29,9 @@ const HomePage = () => {
         <div className="bg-white rounded-lg p-8 shadow-md">
 
           {/* Heading */}
-          <h2 className="text-xs font-semibold text-center mb-6 whitespace-nowrap overflow-hidden text-ellipsis mx-auto">
+          <h2
+            className="text-xs font-semibold text-center mb-6 whitespace-nowrap overflow-hidden text-ellipsis mx-auto"
+          >
             You don't need an app to use Omegle Online on your phone or tablet! The website works great on mobile.
           </h2>
 
@@ -72,37 +74,40 @@ const HomePage = () => {
             <p className="font-bold">Video is monitored. Keep it clean ❗</p>
           </div>
 
-          {/* Dual Alignment Heading */}
-          <div className="flex justify-between items-center mb-4">
-            <h2 className="text-xl font-bold">What do you wanna talk about?</h2>
-            <h2 className="text-xl font-bold">Start chatting:</h2>
-          </div>
+          {/* Flex Row: Interests & Chat Buttons */}
+          <div className="flex flex-col sm:flex-row justify-between items-start sm:items-center gap-6">
+            
+            {/* Interest Input */}
+            <div className="flex-1">
+              <h2 className="text-lg font-bold mb-2">What do you wanna talk about?</h2>
+              <input
+                type="text"
+                placeholder="Add your interests (optional)"
+                value={interests}
+                onChange={(e) => setInterests(e.target.value)}
+                className="p-3 rounded border border-gray-300 w-full"
+              />
+            </div>
 
-          {/* Input and Buttons */}
-          <div className="flex flex-col sm:flex-row justify-center gap-4 mb-6">
-            <input
-              type="text"
-              placeholder="Add your interests (optional)"
-              value={interests}
-              onChange={(e) => setInterests(e.target.value)}
-              className="p-3 rounded border border-gray-300 w-full sm:w-96"
-            />
-          </div>
+            {/* Start Chatting Buttons */}
+            <div className="flex-1 text-center sm:text-right">
+              <h2 className="text-lg font-bold mb-4 sm:mb-2">Start chatting:</h2>
+              <div className="flex justify-center sm:justify-end gap-4">
+                <button
+                  onClick={() => startChat("text")}
+                  className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded"
+                >
+                  Text
+                </button>
+                <button
+                  onClick={() => startChat("video")}
+                  className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded"
+                >
+                  Video
+                </button>
+              </div>
+            </div>
 
-          <div className="flex justify-center gap-4">
-            <button
-              onClick={() => startChat("text")}
-              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded"
-            >
-              Text
-            </button>
-            <span className="self-center">or</span>
-            <button
-              onClick={() => startChat("video")}
-              className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded"
-            >
-              Video
-            </button>
           </div>
         </div>
       </main>
