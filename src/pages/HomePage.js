@@ -26,8 +26,11 @@ const HomePage = () => {
       <main className="container mx-auto px-2 pt-1 max-w-3xl">
         <div className="bg-white rounded-lg p-5 shadow-md">
 
-          {/* Notice (Updated Styling) */}
-          <h2 className="text-sm font-bold text-left text-black mb-4 whitespace-nowrap">
+          {/* Notice with corrected styles */}
+          <h2
+            className="text-base font-bold text-black text-center mb-4 leading-snug tracking-tight"
+            style={{ fontFamily: "Arial, Helvetica, sans-serif" }}
+          >
             You don't need an app to use Omegle on your phone or tablet! The website works great on mobile.
           </h2>
 
