@@ -93,14 +93,14 @@ const HomePage = () => {
               <div className="flex justify-center gap-3 items-center">
                 <button
                   onClick={() => startChat("text")}
-                  className="bg-blue-500 hover:bg-blue-600 text-white text-sm font-bold py-2 px-5 rounded"
+                  className="bg-gradient-to-b from-[#70c0ff] to-[#007bff] text-white font-bold text-sm py-2 px-6 rounded"
                 >
                   Text
                 </button>
                 <span className="text-sm font-medium">or</span>
                 <button
                   onClick={() => startChat("video")}
-                  className="bg-blue-500 hover:bg-blue-600 text-white text-sm font-bold py-2 px-5 rounded"
+                  className="bg-gradient-to-b from-[#70c0ff] to-[#007bff] text-white font-bold text-sm py-2 px-6 rounded"
                 >
                   Video
                 </button>
