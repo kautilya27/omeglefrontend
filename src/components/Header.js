@@ -1,6 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 function Header() {
+  const [onlineCount, setOnlineCount] = useState(getRandomOnlineCount());
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setOnlineCount(getRandomOnlineCount());
+    }, 5000); // update every 5 seconds
+
+    return () => clearInterval(interval); // cleanup on unmount
+  }, []);
+
+  function getRandomOnlineCount() {
+    return Math.floor(Math.random() * (12000 - 6000 + 1)) + 6000;
+  }
+
   return (
     <header
       style={{
@@ -9,11 +23,11 @@ function Header() {
         justifyContent: "space-between",
         background: "#fff",
         padding: "10px 0",
-        boxShadow: "0 6px 12px rgba(0, 0, 0, 0.15)", // stronger shadow
+        boxShadow: "0 6px 12px rgba(0, 0, 0, 0.15)",
         borderBottom: "1px solid #f0f0f0",
         flexWrap: "wrap",
-        position: "relative", // optional for stacking
-        zIndex: 10, // optional to bring it above content
+        position: "relative",
+        zIndex: 10,
       }}
     >
       {/* Logo and Online Text */}
@@ -79,7 +93,7 @@ function Header() {
             marginRight: 5,
           }}
         >
-          10,000+
+          {onlineCount.toLocaleString()}
         </span>
         <span
           style={{
