@@ -27,15 +27,14 @@ const HomePage = () => {
 
       <main className="container mx-auto p-4 max-w-3xl">
         <div className="bg-white rounded-lg p-8 shadow-md">
-          {/* FORCED SINGLE LINE */}
+          {/* Forced single line, smaller font */}
           <h1
-            className="text-base font-semibold text-center mb-6 whitespace-nowrap overflow-hidden text-ellipsis mx-auto"
-            style={{ maxWidth: "100%", width: "1000px" }}
+            className="text-sm font-semibold text-center mb-6 whitespace-nowrap overflow-hidden text-ellipsis mx-auto"
           >
             You don't need an app to use Omegle Online on your phone or tablet! The website works great on mobile.
           </h1>
 
-          {/* Image Centered */}
+          {/* Centered Image */}
           <div className="mb-8 flex justify-center">
             <img
               src="/people%20video%20calling.webp"
